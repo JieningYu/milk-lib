@@ -43,7 +43,7 @@ public class BackgroundRendererMixin {
 	}
 
 	@Inject(method = "applyFog", at = @At("HEAD"), cancellable = true)
-	private static void milk$applyFog(Camera camera, FogType fogType, float f, boolean bl, CallbackInfo ci) {
+	private static void milk$applyFog(Camera camera, FogType fogType, float viewDistance, boolean thickFog, float f, CallbackInfo ci) {
 		FluidState state = MinecraftClient.getInstance().world.getFluidState(camera.getBlockPos());
 		if (state.isIn(Milk.MILK_TAG)) {
 			RenderSystem.setShaderFogStart(-8);

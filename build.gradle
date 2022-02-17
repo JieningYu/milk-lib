@@ -12,13 +12,13 @@ targetCompatibility = JavaVersion.VERSION_17
 // --- versions ---
 group = "io.github.tropheusj"
 archivesBaseName = "milk"
-version = "0.1.6"
+version = "0.2.0"
 
-// https://fabricmc.net/versions.html
-String minecraft_version = "1.18.1"
-String yarn_mappings = "2"
-String loader_version = "0.12.12"
-String fabric_version = "0.45.0+1.18"
+// https://fabricmc.net/develop/
+String minecraft_version = "1.19_deep_dark_experimental_snapshot-1"
+String yarn_mappings = "1"
+String loader_version = "0.13.2"
+String fabric_version = "0.46.4+1.18"
 
 String dripstone_fluid_lib_version = "1.1.1"
 String sodium_version = "0.3.3" // https://modrinth.com/mod/sodium
@@ -70,7 +70,7 @@ processResources {
 	}
 }
 
-tasks.withType(JavaCompile).configureEach { it.options.release = 16 }
+tasks.withType(JavaCompile).configureEach { it.options.release = 17 }
 
 java {
 	withSourcesJar()
